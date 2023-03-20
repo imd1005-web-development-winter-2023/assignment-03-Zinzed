@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!-- Set the page title -->
-    <title>Assignment 03</title>
+    <title>TOADO</title>
 
     <!-- Set the charset we're using to UTF-8 -->
     <meta charset="UTF-8" />
@@ -17,9 +17,26 @@
     <link rel="stylesheet" href="style.css" />
 
     <!-- Set the Favicon  -->
-    <link rel="icon" href="./images/favicon/rocket.svg" type="image/svg+xml" />
+    <link rel="icon" href="images\favicon\Asset 3.png" type="image/png+xml" />
+  
+    <link rel="stylesheet" href="https://use.typekit.net/sen8vwj.css"/>
+  
   </head>
+  
   <body>
+    <div class="preloader">
+      <h1 class="logo-header">
+        <span class="company">TOA</span><span class="company">DO</span>
+      </h1>
+
+      <div class="wrapper">
+        <div class="box">
+        <img src="images\favicon\Asset 3.png" aly="" class="img1">
+        <img src="images\favicon\Asset 2.png" aly="" class="img2">
+      </div>
+      </div>
+    </div>
+    
     <!--
 
       ADD YOUR ASSIGNMENT 03 CODE
@@ -35,11 +52,69 @@
       - Have you conducted a code review and left a GitHub Issue on your team member's repo?
 
     -->
+
+    
     <main>
-      <div id="app"></div>
+      <div id="app">
+
+        <section class="welcome">
+          <h2 class="title">
+            Welcome, <input type="text" id="name" placeholder="Name here">
+          </h2>
+        </section>
+
+        <section class="create-todo">
+          <h3>CREATE A TODO</h3>
+          <form id="new-todo-form">
+            <h4>Add a new to-do activity:</h4>
+            <input 
+            type="text" 
+            name="content" 
+            id="content" 
+            placeholder="ex: feed cat" />
+
+            <h4>Pick a category</h4>
+            <div class="options">
+
+                <label>
+                  <input 
+                  type="radio" 
+                  name="category" 
+                  id="category1"
+                  value="important">
+                  <span class="bubble important"></span>
+                  <div>IMPORTANT</div>
+                </label>
+
+                <label>
+                  <input 
+                  type="radio" 
+                  name="category" 
+                  id="category2"
+                  value="personal">
+                  <span class="bubble personal"></span>
+                  <div>PERSONAL</div>
+                </label>
+
+            </div>
+            
+              <input type="submit" value="Add Todo"/>
+
+          </form>
+        </section>
+
+          <section class="todo-list">
+            <h3>TODO LIST</h3>
+            <div class="list" id="todo-list">
+            </div>
+          </section>
+
+      </div>
     </main>
 
     <!-- This is where we add our awesome JavaScript code -->
     <script src="./main.js"></script>
   </body>
 </html>
+
+<!-- Youtube video used for help: https://youtu.be/6eFwtaZf6zc -->
